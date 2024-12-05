@@ -1,0 +1,39 @@
+
+.service .top{
+    margin-top: 50px;
+    text-align: center;
+}
+.service .top p {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.service .content {
+    padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 50px auto;
+}
+.service .content .card {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #eee;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    width: 300px;
+    height: 100px;
+}
+.service .card h2 {
+    font-size: 20px;
+}
+.service .bottom {
+    text-align: center;
+}
+.service .card svg {
+    width: 40px;
+}

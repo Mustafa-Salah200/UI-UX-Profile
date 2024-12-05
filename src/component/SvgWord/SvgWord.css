@@ -1,0 +1,8 @@
+.svg-word {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.svg-word img {
+  width: 20px;
+}

@@ -1,0 +1,63 @@
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  padding: 0 40px;
+  max-width: var(--max-width);  
+  margin: 70px auto;
+}
+
+.landing h1 {
+  width: 100%;
+  font-size: 42px;
+}
+.landing .info h3.content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+.landing .info span {
+  position: relative;
+  padding: 0 10px;
+}
+.landing .info span::after {
+    position: absolute;
+    content: "";
+    bottom: 5px;
+    left: 0;
+    height: 15px;
+    z-index: -1;
+    width: 100%;
+  background-color: var(--main-color);
+}
+.landing .btns {
+  display: flex;
+  gap: 20px;
+}
+.landing .btns button.default {
+    cursor: pointer;
+    border: 3px solid #000;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 19px;
+    background-color: #fff;
+}
+
+.landing .image {
+  width: 300px;
+  border-radius: 50%;
+  height: 300px;
+  overflow: hidden;
+  background-color: var(--main-color);
+}
+.landing .image img {
+  width: 100%;
+}
+@media (max-width: 830px) {
+  .landing {
+    grid-template-columns: 1fr;
+  }
+  .landing .image {
+    display: none;
+  }
+}

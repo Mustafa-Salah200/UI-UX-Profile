@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --main-color: #ffda0b;
+  --max-width: 1000px;
+}
+button {
+  cursor: pointer;
+  padding: 10px 40px;
+}
+
+.active-btn {
+  background-color: #ffda0b;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  border-radius: 50px;
+}
+.main-title {
+  position: relative;
+  width: fit-content;
+  padding: 0 10px;
+  margin: auto;
+  font-size: 40px;
+}
+.main-title::after {
+  position: absolute;
+  content: "";
+  bottom: 5px;
+  left: 0;
+  height: 15px;
+  z-index: -1;
+  width: 100%;
+  background-color: var(--main-color);
+}
+@media (max-width: 767px) {
+  button {
+    padding: 6px 15px;
+}
+}
