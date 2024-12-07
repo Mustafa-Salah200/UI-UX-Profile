@@ -1,4 +1,5 @@
 nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,30 +10,80 @@ nav {
 nav h1 {
     font-size: 35px;
 }
-nav ul {
+nav .links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-ul a {
+
+.links a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
     font-size: 20px;
 }
+
 nav .bar {
     display: none;
     width: 35px;
     cursor: pointer;
 }
-
-@media (max-width: 992px){
+.drop_menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 81px;;
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.4s;
+}
+.drop_menu.open {
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 1px 0px 4px 1px #7777;
+    height: 277px;
+}
+.drop_menu ul {
+    list-style: none;
+    text-align: center;
+}
+.drop_menu ul li {
+    padding: 10px 20px;
+    width: 100%;
+    margin: 10px 0;
+}
+.drop_menu ul li:hover {
+    background-color: #eee;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.drop_menu ul a {
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+}
+.drop_menu button {
+    width: 100%;
+}
+@media (max-width: 769px){
     nav .bar {
         display: block;
     }
-    nav ul ,
-    nav button {
+    nav .links ,
+    nav > button {
         display: none;
+    }
+    .drop_menu {
+        display: block;
+    }
+}
+@media (max-width: 450px){
+    .drop_menu {
+        width: 90%;
     }
 }

@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 import "./Portfolios.css";
 
 const Portfolios = () => {
   return (
-    <section className="portfolios">
+    <section className="portfolios" id="portfolios">
       <div className="top">
         <h1 className="main-title">Portfolios</h1>
         <p>click on the cards to see my portfolios of related category.</p>
@@ -67,14 +68,17 @@ const Portfolios = () => {
           title="Mobile App UI/UX"
         />
 
-        <div className="card">
+        <div className="card show">
           <h2>Want your stunning designs</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
             nostrum blanditiis exercitationem placeat autem ullam ea doloremque,
             deserunt dignissimos laudantium! Dolor.
           </p>
-          <button>Let&apos;s Talk</button>
+          <motion.button
+          whileHover={{scale: 1.1}}
+          whileTap={{scale:0.95}}
+          >Let&apos;s Talk</motion.button>
         </div>
       </div>
     </section>
@@ -85,7 +89,7 @@ export default Portfolios;
 
 const Card = ({ title, svg }) => {
   return (
-    <div className="card">
+    <div className="card show">
       <div className="svg">{svg}</div>
       <h2>{title}</h2>
       <p>

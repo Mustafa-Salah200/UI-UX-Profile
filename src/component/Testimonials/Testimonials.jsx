@@ -2,17 +2,18 @@
 import "./Testimonials.css";
 import profile from "../../assets/profile.svg";
 
+
 const Testimonials = () => {
   return (
-    <section className="testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="top">
         <h1 className="main-title">Testimonials</h1>
         <p>Here are some testimonials from out client.</p>
       </div>
       <div className="content">
-        <Card text=" This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
-        <Card text="This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
-        <Card text=" This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
+        <Card cl={"side_card1"} text=" This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
+        <Card  cl={"side_card2"} text="This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
+        <Card  cl={"side_card3"}  text=" This young man- is a great designer. Second time i am working with him. He will be creative with the brief. I am very pleased with the outcome. He also works very hard and listens to clients- I have been picky at time and he made the appropriate amendment. All the best Kazim " />
       </div>
     </section>
   );
@@ -20,9 +21,13 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const Card = ({ text }) => {
+const Card = ({ text, cl }) => {
   return (
-    <div className="card">
+    <div className={`card ${cl}`}
+    
+    style={{
+      animationDelay: "5s"
+    }}>
       <div className="svg">
         <img src={profile} alt="" />
       </div>
